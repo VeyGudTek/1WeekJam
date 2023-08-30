@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            GameObject temp_bullet = Instantiate(bullet, transform.position + new Vector3(0, 0, 2), transform.rotation);
+            GameObject temp_bullet = Instantiate(bullet, transform.position + transform.forward * 2, transform.rotation);
             bullet_list.Add(temp_bullet);
             temp_bullet.GetComponent<Rigidbody>().AddForce(transform.forward * 1000f);
         }
