@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -32,5 +32,16 @@ public class Gun : MonoBehaviour
                 Destroy(temp);
             }
         }
+
+        aim();
+    }
+
+    void aim()
+    {
+
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z - transform.position.z)));
+        
+        transform.LookAt(mousePosition);
     }
 }
+
