@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
         timer.text = time_value.ToString("0");
         if (time_value <= 0)
         {
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("End2");
         }
     }
 }
