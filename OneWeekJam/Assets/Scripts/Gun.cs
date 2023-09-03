@@ -34,6 +34,16 @@ public class Gun : MonoBehaviour
         }
 
         aim();
+
+        if (Input.GetAxis("Horizontal") == 0)
+        {
+            transform.position = new Vector3(transform.position.x, 11.5f, transform.position.z);
+
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x, 11.5f, transform.position.z);
+        }
     }
 
     void aim()
